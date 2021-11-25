@@ -1,0 +1,12 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Aktualisierung App1",
+  "parameters": {
+    "version": {
+      "description": "GIT Tag welches deployed werden soll",
+      "type": "String"
+    }
+  },
+  "private": true
+}

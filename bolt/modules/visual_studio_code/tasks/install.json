@@ -1,0 +1,7 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Installation of VSCode from yum repo",
+  "parameters": {
+  }
+}

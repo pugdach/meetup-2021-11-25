@@ -1,0 +1,21 @@
+
+Bolt nutzt SSH/WinRM als Zugang zu den Zielsystemen.
+
+
+Orchestrierungsrechner/Workstation
+  |		|		|
+server1		server2		server3
+ssh		ssh		winrm
+
+
+Kommandos:
+
+bolt command run <command> --targets server1, server2
+
+
+Inventur:
+
+In der inventory.yaml Datei können Server zu Gruppen zusammengefasst werden.
+
+Server in anderen Netzsegmenten können via proxy-server angesprochen werden.
+Der "Proxy" oder "Jump" Host muss in der inventory.yaml angegeben werden.

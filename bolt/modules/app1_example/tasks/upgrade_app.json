@@ -1,0 +1,15 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "Aktualisierung App1",
+  "parameters": {
+    "version": {
+      "description": "GIT Tag welches deployed werden soll",
+      "type": "String"
+    }
+  },
+  "implementations": [
+    {"name": "upgrade_app_linux.sh", "requirements": ["shell"]},
+    {"name": "upgrade_app_windows.ps1", "requirements": ["powershell"]}
+  ]
+}

@@ -1,0 +1,25 @@
+# defined type app1_example::usermanagement
+define app1_example::usermanagement (
+  Boolean $manage_ssh_dir = false,
+){
+  File {
+    owner => $title,
+    group => $title,
+    mode  => '0644',
+  }
+  group { $title:
+    ensure => present,
+  }
+  user { $title:
+    ensure => present,
+  }
+  file { "/home/${title}":
+    ensure => directory,
+  }
+  if $manage_ssh_dir {
+    file { "/home/${title}/.ssh":
+      ensure => directory,
+      mode   => '0640',
+    }
+  }
+}

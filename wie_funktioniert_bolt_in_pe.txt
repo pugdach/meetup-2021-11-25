@@ -1,0 +1,17 @@
+Bolt und Puppet Enterprise
+
+In Puppet Enterprise ist eine Message Queue integriert.
+An diese binden sich die PXP-Agents (Bestandteil des puppet-agent Paketes).
+
+In einer separaten Netzzone muss man einen Puppet Compiler stellen, der diese Connections an den Primären Puppet Server weiterleitet.
+
+Das Starten von Jobs, Tasks oder Plans erfolgt entweder über das Puppet Enterprise Web Interface, oder über einen PE Controller.
+Am PE Controller muss sich ein User ein Token erzeugen und nutzt dann mit Hilfe von puppet Kommandos via Orchestration API.
+
+
+Workstation = PE Contoller -> PE Server Orchestration API + Message Queue
+				|		|		|
+				server1		server2		server 3
+				pxp-agent	pxp-agent	pxp-agent
+
+

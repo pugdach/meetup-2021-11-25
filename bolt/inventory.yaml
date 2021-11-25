@@ -1,0 +1,79 @@
+groups:
+  - name: puppet
+    targets:
+      - puppet.pug.example42.cloud
+
+  - name: gitlab
+    targets:
+      - gitlab.pug.example42.cloud
+
+  - name: gitlabrunner
+    targets:
+      - runner.pug.example42.cloud
+
+  - name: students
+    targets:
+      - student1.pug.example42.cloud
+      - student2.pug.example42.cloud
+      - student3.pug.example42.cloud
+      - student4.pug.example42.cloud
+      - student5.pug.example42.cloud
+      - student6.pug.example42.cloud
+      - student7.pug.example42.cloud
+      - student8.pug.example42.cloud
+      - student9.pug.example42.cloud
+      - student10.pug.example42.cloud
+        #- student11.pug.example42.cloud
+        #- student12.pug.example42.cloud
+        #- student13.pug.example42.cloud
+        #- student14.pug.example42.cloud
+        #- student15.pug.example42.cloud
+        #- student16.pug.example42.cloud
+        #- student17.pug.example42.cloud
+
+  - name: login
+    targets:
+      - login.pug.example42.cloud
+
+  - name: webserver
+    targets:
+      - student1.pug.example42.cloud
+      - student2.pug.example42.cloud
+      - student6.pug.example42.cloud
+      - student7.pug.example42.cloud
+
+  - name: appserver
+    targets:
+      - student3.pug.example42.cloud
+      - student4.pug.example42.cloud
+      - student8.pug.example42.cloud
+      - student9.pug.example42.cloud
+
+  - name: dbserver
+    targets:
+      - student5.pug.example42.cloud
+      - student10.pug.example42.cloud
+
+  - name: devserver
+    targets:
+      - student1.pug.example42.cloud
+      - student2.pug.example42.cloud
+      - student3.pug.example42.cloud
+      - student4.pug.example42.cloud
+      - student5.pug.example42.cloud
+
+  - name: testserver
+    targets:
+      - student6.pug.example42.cloud
+      - student7.pug.example42.cloud
+      - student8.pug.example42.cloud
+      - student9.pug.example42.cloud
+      - student10.pug.example42.cloud
+
+config:
+  transport: ssh
+  ssh:
+    user: root
+    host-key-check: false
+    private-key: ~/.ssh/id_rsa
+    connect-timeout: 60

@@ -1,0 +1,48 @@
+# @summary A short summary of the purpose of this class
+#
+# A description of what this class does
+#
+# @example
+#   include app1
+class app1_exaqmple::case (
+  Enum['ntp', 'chrony'] $timeclient,
+){
+  package { 'ntp':
+    ensure => absent,
+  }
+  file { '/etc/ntp.conf':
+    ensure => file,
+    mode   => '0644',
+    source => 'puppet:///modules/app1/ntp.cfg',
+  }
+  case $timeclient {
+    'ntp': {
+      file { '/etc/test.cfg':
+        ensure  => file,
+        mode    => '0644',
+        content => epp('app1/db.cfg.epp'),
+      }
+    }
+    'chrony': {
+      file { '/etc/chrony.cfg':
+        ensure  => file,
+        mode    => '0644',
+        content => epp('app1/db.cfg.epp'),
+      }
+    }
+    default: {
+      fail('we should never see this')
+    }
+  }
+  service { 'ntpd':
+    ensure => running,
+    enable => true,
+  }
+
+  # Resource chaining
+  Package['ntp']
+  -> File['/etc/ntp.conf']
+  ~> Service['ntpd']
+}
+
+

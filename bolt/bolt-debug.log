@@ -1,0 +1,4 @@
+2021-11-25T08:48:50.248007 INFO   [main] [Bolt::Logger] Loaded project from '/Users/mea/Documents/github/tuxmea/meetup-2021-11-25/bolt'
+2021-11-25T08:48:50.327441 DEBUG  [main] [Bolt::Executor] Started with 36 max thread(s)
+2021-11-25T08:48:51.112691 DEBUG  [main] [Bolt::PAL] Loading modules from /opt/puppetlabs/bolt/lib/ruby/gems/2.7.0/gems/bolt-3.17.0/bolt-modules:/Users/mea/Documents/github/tuxmea/meetup-2021-11-25/bolt/modules:/Users/mea/Documents/github/tuxmea/meetup-2021-11-25/bolt/.modules:/opt/puppetlabs/bolt/lib/ruby/gems/2.7.0/gems/bolt-3.17.0/modules
+2021-11-25T08:48:51.114593 DEBUG  [main] [Bolt::Inventory] Loaded inventory from /Users/mea/Documents/github/tuxmea/meetup-2021-11-25/bolt/inventory.yaml

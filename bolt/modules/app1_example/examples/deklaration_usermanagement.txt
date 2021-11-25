@@ -1,0 +1,4 @@
+app1::usermanagement { 'user1': }
+app1::usermanagement { 'user2': }
+app1::usermanagement { 'user3': }
+
